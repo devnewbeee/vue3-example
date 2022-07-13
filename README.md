@@ -1,7 +1,7 @@
 # Guide
 
 ## 신규 파일 생성
-```
+```vue
   // 기본 방식
   <script>
     setup() {
@@ -16,7 +16,7 @@
 ```
 
 ## reactive && ref
-```
+```vue
   <script setup>
       import {reactive, ref} from  "vue"
       
@@ -57,7 +57,7 @@
 ```
 
 ## Component
-```
+```vue
   <script setup>
       import child-component from "@/components/child-component"
       
@@ -71,7 +71,7 @@
 ```
 
 ## Props
-```
+```vue
   // parent.vue
   <script setup>
       import child-component from "@/components/child-component";
