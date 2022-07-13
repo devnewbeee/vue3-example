@@ -15,25 +15,52 @@
   </script>
 ```
 
-## Project setup
+## reactive && ref
 ```
-npm install
+  <script setup>
+      import {reactive, ref} from  "vue"
+      
+      const filter = reactive({
+          checkbox: [],
+          selectBox: ''
+      });
+      
+      const text = ref({
+          comment: ''
+      });
+      
+      // ref에서는 계산 속성 (computed) 사용 불가
+  </script>
+  
+  <template>
+      <div class="checkbox">
+          <label for="chk1">체크박스1</label>
+          <input type="checkbox" id="chk1" v-model="filter.checkbox">
+          <label for="chk2">체크박스2</label>
+          <input type="checkbox" id="chk2" v-model="filter.checkbox">
+      </div>
+      
+      <div class="selectbox">
+          <select v-model="filter.selectbox">
+              <option></option>
+          </select>
+      </div>
+      
+      <div class="text">
+          <input type="text" v-mode="text.comment">
+      </div>
+      
+      <p> 체크박스 : {{ filter.checkbox }} </p>
+      <p> 셀렉트박스 : {{ filter.selectbox }} </p>
+      <p> 텍스트박스 : {{ text.comment }} </p>
+  </template>
 ```
 
-### Compiles and hot-reloads for development
+## Ref
 ```
-npm run serve
+  <script setup>
+      import {ref} from "vue"
+      
+      const checkbox = ref([]);
+  </script>
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
