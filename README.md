@@ -1,4 +1,19 @@
-# exam-vue
+# Guide
+
+## 신규 파일 생성
+```
+  // 기본 방식
+  <script>
+    setup() {
+      ...
+    }
+  </script>
+  
+  // 축약 방식 (추천)
+  <script setup>
+     ...
+  </script>
+```
 
 ## Project setup
 ```
