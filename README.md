@@ -55,12 +55,3 @@
       <p> 텍스트박스 : {{ text.comment }} </p>
   </template>
 ```
-
-## Ref
-```
-  <script setup>
-      import {ref} from "vue"
-      
-      const checkbox = ref([]);
-  </script>
-```
