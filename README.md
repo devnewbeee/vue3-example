@@ -57,7 +57,6 @@
 ```
 
 ## Component
-
 ```
   <script setup>
       import child-component from "@/components/child-component"
@@ -69,4 +68,35 @@
       <p>parent component</p>
       <child-component /> <!-- child component -->
   </template>
+```
+
+## Props
+```
+  // parent.vue
+  <script setup>
+      import child-component from "@/components/child-component";
+      
+      ...
+  </script>
+  
+  <template>
+      <p>parent component</p>
+      <child-component :child='y' /> <!-- child component -->
+  </template>
+ 
+ // chile-component.vue
+ <script setup>
+    import {defineProps} from "vue";
+    
+    const result = defineProps({
+        child: {
+            type: String,
+            default: 'Parent'
+        },
+    });
+ </script>
+ 
+ <template>
+    {{ result.child }}
+ </template>
 ```
