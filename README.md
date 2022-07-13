@@ -55,3 +55,18 @@
       <p> 텍스트박스 : {{ text.comment }} </p>
   </template>
 ```
+
+## Component
+
+```
+  <script setup>
+      import child-component from "@/components/child-component"
+      
+      ...
+  </script>
+  
+  <template>
+      <p>parent component</p>
+      <child-component /> <!-- child component -->
+  </template>
+```
