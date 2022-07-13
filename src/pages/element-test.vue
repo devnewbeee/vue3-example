@@ -44,7 +44,7 @@
         setWatch() {
             watch(this.getFilter(), (val) => {
                 console.dir(val);
-                // 필터 선택 될 때 마다 state에 필터값 API 호출
+                // 필터 선택 될 때 마다 state에 마지막 필터 조건 저장 및 API 호출
                 this.store.commit('UPDATE_SEARCH_FILTER', val, {root: true});
                 axios.post('/recommend-list', {...val})
                     .then(response => {
@@ -105,7 +105,6 @@
     <div class="reset_area">
         <button type="button" @click="filter.reset()">초기화</button>
     </div>
-
 </template>
 
 <style scoped>

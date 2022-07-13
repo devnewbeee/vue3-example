@@ -1,6 +1,6 @@
 <script setup>
-    // import { computed } from 'vue';
     import { useStore } from 'vuex';
+
 
     const store = useStore();
     // // 필터 파라미터 정의 (vuex store)
@@ -13,7 +13,6 @@
     // const filter = computed(() => store.state.search.filter);
 
     const filter = store.state.search.filter;
-
 
     // const data = reactive({
     //     filter: computed(() => store.getters['search/getSearchFilter'])
